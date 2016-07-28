@@ -42,8 +42,10 @@ public class JSONtoCSV {
 		} catch (IOException e) {
 			// in case of malformed URL or cannot connect to the server, return empty JSON array to create empty CSV file
 			System.out.println("the server is down or malformed URL");
+			myArray = new JSONArray();
 		} catch (JSONException e) {
 			// in case of wrong JSON structure, return empty JSONArray
+			System.out.println("error in the server data");
 			myArray = new JSONArray();
 		}
 		
